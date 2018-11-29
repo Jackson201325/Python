@@ -14,7 +14,7 @@ def check_keydown_events(event, ai_settings, screen, ship, bullets):
         ship.moving_left = True
     elif event.key == pygame.K_SPACE:
         fire_bullet(ai_settings, screen, ship, bullets)
-    elif event.key == pygame.K_q:
+    elif event.key == pygame.K_Q:
         sys.exit()
         
 def check_keyup_events(event, ship):
@@ -119,7 +119,7 @@ def check_high_score(stats, sb):
 def check_bullet_alien_collisions(ai_settings, screen, stats, sb, ship,
         aliens, bullets):
     """Respond to bullet-alien collisions."""
-    # Remove any bullets and aliens that have collided.
+    
     collisions = pygame.sprite.groupcollide(bullets, aliens, True, True)
     
     if collisions:
